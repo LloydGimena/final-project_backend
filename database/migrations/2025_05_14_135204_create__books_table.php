@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('books', function (Blueprint $table) {
+        Schema::create('Bbooks', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('title');
             $table->string('author');

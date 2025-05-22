@@ -5,7 +5,7 @@ use App\http\Controllers\Api\bookController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::apiResource('User', UserController::class);
+Route::apiResource('user', UserController::class);
 Route::apiResource('books', bookController::class);
 Route::get('/books', function (Request $request) {
     return $request->books();

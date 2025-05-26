@@ -91,8 +91,12 @@ class UserController extends Controller
             'date'=> new UserResource($user)
         ],200);
     }
-    public function destroy()
+    public function destroy(users $user)
     {
-       
+        $user -> delete();
+        return response()->json([
+            'message'=>'User deleted successfully',
+        ],200);
+
     }
 }
